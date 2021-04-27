@@ -1,9 +1,14 @@
 ---
-- name: Playbook name
-  hosts: host1
+- hosts: webserver
   remote_user: root
   tasks:
-     - name: Installer Vim
-       apt:
+     - name: debug
+       debug:
+           msg: "Bonjour ici l'environonnement"
+- hosts: dbserver
+  remote_user: root
+  tasks:
+       - name: ensure is installed
+         apt:
            name: vim
            state: present
