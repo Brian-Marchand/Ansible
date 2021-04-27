@@ -1,0 +1,6 @@
+---
+- name: création de l'utilisateur Brian
+  user:
+    name: Brian
+    state: present
+    password: "{{ 'password' | password_hash('sha512') }}"  

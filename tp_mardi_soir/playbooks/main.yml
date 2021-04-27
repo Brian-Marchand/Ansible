@@ -1,0 +1,13 @@
+---
+- name: Create new users
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Create user Brian
+      user:
+        name: Brian
+        state: present
+        password: "{{ 'toto' | password_hash('sha512') }}"
+        shell: /bin/bash 
+
+
