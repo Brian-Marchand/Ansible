@@ -76,3 +76,21 @@ sudo docker inspect host1
 sudo docker inspect 172.17.0.2
 docker ps
 sudo su
+ls
+mkdir playbooks
+ls
+cd playbooks/
+touch main.yml
+ls
+vim main.yml 
+ansible-playbooks/main.yml --diff
+ansible-playbook playbooks/main.yml --diff
+sudo su
+ssh -T git@gitlab.com
+cd ..
+git init playbooks/
+cd playbooks/
+sudo su
+ansible all -m ping
+sudo ansible all -m ping
+sudo su

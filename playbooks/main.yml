@@ -2,13 +2,15 @@
 - hosts: webserver
   remote_user: root
   tasks:
-     - name: debug
-       debug:
-           msg: "Bonjour ici l'environonnement"
+   - name: debug
+     debug:
+       msg: "bonjour ici l'environement qui fonctionne"
+       
 - hosts: dbserver
   remote_user: root
   tasks:
-       - name: ensure is installed
-         apt:
-           name: vim
-           state: present
+   - name: "ensure is installed"
+     apt:
+       name: vim
+       state: present
+
