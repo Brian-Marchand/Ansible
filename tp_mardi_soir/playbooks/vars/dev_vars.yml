@@ -1,10 +1,4 @@
 ---
-vars:
-        user: Brian
-        tasks:
-                - name: Creation de l'utilisateur  {{Brian}}
-                  user:
-                    name: "{{Brian}}"
-                    state: present
-                    password: "{{ 'password' | password_hash('sha512') }}"  
+vim_state: "absent"
+username: brian
 
