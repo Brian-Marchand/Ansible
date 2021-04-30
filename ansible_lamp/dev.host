@@ -1,0 +1,7 @@
+[webserver]
+host_web
+host_db
+
+[all:vars]
+env="dev"
+

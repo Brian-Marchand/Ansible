@@ -1,0 +1,21 @@
+---
+tasks:
+
+- name: "Installation du serveur apache"
+    apt:
+                      name: "{{apache}}"
+                      state: present
+                      msg: "version2.4.29"
+
+- check: install apache
+
+
+- name: "lancement apach"
+  service: 
+  name: apache 
+  state: started
+
+- name: "Status de apache"
+  notify: "status"
+    command: apachectl status 
+

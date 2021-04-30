@@ -1,0 +1,15 @@
+---
+- name: "Installation php"
+   apt:
+  name: "{{apache}}"
+ state: present
+   msg: "version 7"
+
+- name: "lancement php version 7"
+  service:
+     name: php
+    state: stated
+
+- name: "Status de php"
+  notify: "status"
+  command: apachectl status
